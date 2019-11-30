@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Roomie.css';
 import Chore from '../Chore/Chore';
+import { Link } from 'react-router-dom';
 
 export default function Roomie(props) {
         return (
@@ -25,6 +26,9 @@ export default function Roomie(props) {
                         Vacuum hallway
                     </Chore>
                 </ul>
+                <button type="button" className="add-chore">
+                    <Link to='/addChore'>Add a Chore </Link>
+                </button>
             </>
         );
 }
