@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "alias": "jadedtofu-chore-share-app",
+    "name": "chore-share-app",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/.*", "dest": "/index.html" }
+    ]
+  }

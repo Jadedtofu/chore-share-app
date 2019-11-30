@@ -1,0 +1,35 @@
+form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shareform {
+    padding: 16px;
+    max-width: 400px;
+}
+
+.shareform label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
+.shareform input,
+.shareform textarea,
+.shareform select {
+  font-size: 14px;
+  padding: 8px;
+  width: 325px;
+}
+
+.shareform select {
+    height: 33px;
+}
+
+.shareform > .field {
+    margin-bottom: 16px;
+}
+
+.shareform > .buttons {
+    margin-top: 26px;
+}

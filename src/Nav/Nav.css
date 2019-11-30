@@ -1,0 +1,6 @@
+nav {
+    padding-right: 5%;
+    position: fixed;
+    text-align: right;
+    z-index: 10;
+}

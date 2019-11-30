@@ -1,22 +1,41 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: darkslateblue;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans",
+  sans-serif; 
+  font-size: 20px;
+  color: #444;
   text-align: center;
+  line-height: 1.5;
 }
 
-.App-logo {
-  height: 40vmin;
+body p {
+  padding: 1% 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav,
+footer {
+  padding: 1% 0;
+  background-color: #aaa;
 }
 
-.App-link {
-  color: #09d3ac;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+section {
+  min-height: 200px;
+  padding: 0% 10% 20% 10%;
+  /* background-color: #bbb; */
 }
