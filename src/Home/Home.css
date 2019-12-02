@@ -3,3 +3,12 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+section {
+    padding: 0;
+}
+
+.add-chore {
+    margin-top: 2%;
+}
+

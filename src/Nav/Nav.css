@@ -1,6 +1,15 @@
-nav {
-    padding-right: 5%;
+nav.top {
     position: fixed;
     text-align: right;
     z-index: 10;
+}
+
+nav.top li {
+    display: inline-block;
+    padding: 0;
+}
+
+nav.top li::after {
+    content: "";
+    padding-right: 30px;
 }
