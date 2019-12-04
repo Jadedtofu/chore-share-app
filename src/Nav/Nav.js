@@ -11,9 +11,6 @@ class Nav extends Component {
                         <li className="app-home">
                             <Link to='/home'>Home</Link>
                         </li>
-                        <li className="roomie-page">
-                            <Link to="/roomiePage">Roomie Page</Link>
-                        </li>
                     </ul>
                 </nav>
             </>

@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 class Home extends Component {
     render() {
         return(
-            <>
-            <section className="roomie-1">
-                <Roomie>
-                    <Link to='/roomiePage'>Jane Rom</Link>
+            <main className="homePage">
+            <section className="roomie1">
+                <Roomie note="Rooming for 6 months, likes cats">
+                    Jane Rom
                 </Roomie>
                   <ul>
                     <Chore>
@@ -23,13 +23,13 @@ class Home extends Component {
                         Vacuum hallway
                     </Chore>
                   </ul>
-                <button type="button" className="add-chore">
+                <button type="button" className="addChore">
                     <Link to='/addChore'>Add a Chore </Link>
                 </button>
             </section>
             
-            <section className="roomie-2">
-                <Roomie>
+            <section className="roomie2">
+                <Roomie note="Rooming for 1 year, allergic to dogs">
                     James Mor
                 </Roomie>
                 <ul>
@@ -43,15 +43,17 @@ class Home extends Component {
                         Wash the dishes
                     </Chore>
                   </ul>
-                <button type="button" className="add-chore">
+                <button type="button" className="addChore">
                     <Link to='/addChore'>Add a Chore </Link>
                 </button>
+            </section>
 
-                <button type="button" className="add-roomie">
+            <section className="roomie3">
+                <button type="button" className="addRoomie">
                     <Link to='/addRoomie'>Add a Roomie</Link>
                 </button>
             </section>
-        </>
+        </main>
         );
     }
 }

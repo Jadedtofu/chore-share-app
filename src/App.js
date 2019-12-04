@@ -8,7 +8,6 @@ import Landing from './Landing/Landing';
 import Home from './Home/Home';
 import AddChore from './AddChore/AddChore';
 import AddRoomie from './AddRoomie/AddRoomie';
-import RoomiePage from './RoomiePage/RoomiePage';
 
 class App extends Component {
   state = {
@@ -51,11 +50,6 @@ class App extends Component {
         <Route
           path='/addRoomie'
           component={AddRoomie}
-        />
-
-        <Route
-          path='/roomiePage'
-          component={RoomiePage}
         />
 
         <Footer />

@@ -13,6 +13,48 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
+.tooltip {
+    position: relative;
+    cursor: pointer;
+  }
+  
+.tooltipContent {
+    color: rgb(54, 69, 204);
+}
+
+.tooltipMessage {
+    background-color: hsla(0, 0%, 10%, 0.9);
+    border-radius: 3px;
+    color: #fff;
+    left: 30%;
+    right: 30%;
+    padding: 7px 10px;
+    position: absolute;
+    text-align: center;
+    top: calc(-1.2em - 14px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.tooltipMessage:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    content: " ";
+    font-size: 0;
+    left: 6vw;
+    line-height: 0;
+    margin-left: -5px;
+    position: absolute;
+    top: calc(18px + 14px);
+    width: 0;
+}
+
+.tooltip:hover > .tooltipMessage {
+    opacity: 1;
+    visibility: visible;
+}
