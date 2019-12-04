@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Chore.css';
 
+class Chore extends Component {
 
-export default function Chore(props) {
-        return (
+
+    render() {
+        const {chore } = this.props;
+        // console.log(this.props);
+
+        // will have to do something with the checked prop for crossing out chore
+
+        return(
             <>
-                <li>
-                    {props.children}
-                </li>
-                <button type="button">Done</button>
-                <button type="button">Delete</button>
+              <p className ="chore">
+                {chore}
+              </p>
+              <button type="button">Done</button>
+              <button type="button">Delete</button>
             </>
-        );
+        )
+    }
 }
+
+export default Chore;

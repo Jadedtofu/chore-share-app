@@ -2,14 +2,14 @@ p {
     padding: 0;
 }
 
-.add-chore {
+.addChore {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5%;
 }
 
-.remove-roomie {
+.removeRoomie {
     display: block;
     margin-left: auto;
     margin-right: auto;

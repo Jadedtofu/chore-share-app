@@ -1,60 +1,34 @@
 import React, { Component } from 'react';
 import './Home.css';
 import Roomie from '../Roomie/Roomie';
-import Chore from '../Chore/Chore';
 import { Link } from 'react-router-dom';
-import apiContext from '../ApiContext';
+import ApiContext from '../ApiContext';
 
 class Home extends Component {
 
-    static contextType = apiContext;
+    static contextType = ApiContext;
 
     render() {
         const { roomies=[], chores=[] } = this.context;
-        console.log(this.context);
-        
+        // console.log(this.context);
+
+        const getChoresForRoomie = (chores=[], roomieId) => (
+            (!roomieId)
+            ? chores
+            : chores.filter(chore => chore.roomie_id === roomieId)
+        );
+        // console.log(getChoresForRoomie(chores, 2))
+
         return(
-            <main className="homePage">
-                {/*  map <Roomie /> component, edit roomie component for map */}
-            <section className="roomie1">
-                <Roomie note="Rooming for 6 months, likes cats">
-                    Jane Rom
-                </Roomie>
-                  <ul>
-                    <Chore>
-                        Take out the trash
-                    </Chore>
-                    <Chore>
-                        Sweep living room floor
-                    </Chore>
-                    <Chore>
-                        Vacuum hallway
-                    </Chore>
-                  </ul>
-                <button type="button" className="addChore">
-                    <Link to='/addChore'>Add a Chore </Link>
-                </button>
-            </section>
-            
-            <section className="roomie2">
-                <Roomie note="Rooming for 1 year, allergic to dogs">
-                    James Mor
-                </Roomie>
-                <ul>
-                    <Chore>
-                        Scrub the toilet
-                    </Chore>
-                    <Chore>
-                        Dust the bookshelf
-                    </Chore>
-                    <Chore>
-                        Wash the dishes
-                    </Chore>
-                  </ul>
-                <button type="button" className="addChore">
-                    <Link to='/addChore'>Add a Chore </Link>
-                </button>
-            </section>
+        <main className="homePage">
+            {roomies.map(roomie => 
+                <section key={roomie.id} className="roomie">
+                    <Roomie name={roomie.name}
+                            note={roomie.note}
+                            chores={getChoresForRoomie(chores, roomie.id)}>
+                    </Roomie>
+                </section>
+            )}
 
             <section className="addRoomie">
                 <button type="button" className="addARoomie">
