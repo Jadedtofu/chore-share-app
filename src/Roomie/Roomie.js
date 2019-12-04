@@ -3,26 +3,6 @@ import './Roomie.css';
 import Chore from '../Chore/Chore';
 import { Link } from 'react-router-dom';
 
-// export default function Roomie(props) {
-//         return (
-//             <>
-//             <div className="tooltip">
-//                <header role="banner" className="tooltipContent">
-//                 <h2>
-//                     {props.children}
-//                 </h2>
-//                </header>
-//                 <p className='tooltipMessage'>
-//                     {props.note}
-//                 </p>
-//             </div>
-//                 <button type="button" className="remove-roomie">
-//                     Remove
-//                 </button>
-//             </>
-//         );
-// }
-
 class Roomie extends Component {
 
     render() {
