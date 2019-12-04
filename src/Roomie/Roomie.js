@@ -25,7 +25,7 @@ class Roomie extends Component {
                 <button type="button" className="removeRoomie">
                     Remove
                 </button>
-                <ul>
+                <ul className="chores">
                     {chores.map(chore => 
                         <li key={chore.id}>
                             <Chore id={chore.id}

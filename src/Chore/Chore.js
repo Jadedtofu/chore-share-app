@@ -5,7 +5,7 @@ class Chore extends Component {
 
 
     render() {
-        const {chore } = this.props;
+        const { chore } = this.props;
         // console.log(this.props);
 
         // will have to do something with the checked prop for crossing out chore
