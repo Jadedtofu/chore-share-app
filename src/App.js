@@ -8,16 +8,17 @@ import Landing from './Landing/Landing';
 import Home from './Home/Home';
 import AddChore from './AddChore/AddChore';
 import AddRoomie from './AddRoomie/AddRoomie';
+import ApiContext from './ApiContext'
 
 class App extends Component {
   state = {
     chores: [
-      { id: 1, chore: 'Take out the trash', checked: false },
-      { id: 2, chore: 'Sweep living room floor', checked: false},
-      { id: 3, chore: 'Scrub the toilet', checked: false},
-      { id: 4, chore: 'Vacuum hallway', checked: false},
-      { id: 5, chore: 'Wash the dishes', checked: false},
-      { id: 6, chore: 'Dust the shelves', checked: false}
+      { id: 1, chore: 'Take out the trash', checked: false, roomie_id: 1 },
+      { id: 2, chore: 'Sweep living room floor', checked: false, roomie_id: 1},
+      { id: 3, chore: 'Scrub the toilet', checked: false, roomie_id: 2},
+      { id: 4, chore: 'Vacuum hallway', checked: false, roomie_id: 1},
+      { id: 5, chore: 'Wash the dishes', checked: false, roomie_id: 2},
+      { id: 6, chore: 'Dust the shelves', checked: false, roomie_id: 2}
     ],
 
     roomies: [
@@ -27,8 +28,15 @@ class App extends Component {
   };
 
   render() {
+    const value={
+      roomies: this.state.roomies,
+      chores: this.state.chores
+    }
+
+    // console.log(value);
+
     return (
-      <>
+      <ApiContext.Provider value={value}>
         <Nav />
         <AppHeader />
 
@@ -53,7 +61,7 @@ class App extends Component {
         />
 
         <Footer />
-      </>
+      </ApiContext.Provider>
     );
   }
 }

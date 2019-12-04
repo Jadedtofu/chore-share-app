@@ -3,11 +3,19 @@ import './Home.css';
 import Roomie from '../Roomie/Roomie';
 import Chore from '../Chore/Chore';
 import { Link } from 'react-router-dom';
+import apiContext from '../ApiContext';
 
 class Home extends Component {
+
+    static contextType = apiContext;
+
     render() {
+        const { roomies=[], chores=[] } = this.context;
+        console.log(this.context);
+        
         return(
             <main className="homePage">
+                {/*  map <Roomie /> component, edit roomie component for map */}
             <section className="roomie1">
                 <Roomie note="Rooming for 6 months, likes cats">
                     Jane Rom
@@ -48,8 +56,8 @@ class Home extends Component {
                 </button>
             </section>
 
-            <section className="roomie3">
-                <button type="button" className="addRoomie">
+            <section className="addRoomie">
+                <button type="button" className="addARoomie">
                     <Link to='/addRoomie'>Add a Roomie</Link>
                 </button>
             </section>
