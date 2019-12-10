@@ -111,7 +111,6 @@ class AddRoomie extends Component {
                     <button type="submit" disabled={!this.state.formValid}>
                         Add Roomie
                     </button>
-                    {/* This needs to go to the Home page when it's done submitting :( */}
                 </div>
             </ShareForm>
         </section>

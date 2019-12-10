@@ -72,6 +72,7 @@ class Roomie extends Component {
                             <Chore id={chore.id}
                                    chore={chore.chore}
                                    checked={chore.checked}
+                                   roomie_id={chore.roomie_id}
                             />
                         </li>
                     )}
