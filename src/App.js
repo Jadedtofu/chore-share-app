@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
 import AppHeader from './AppHeader/AppHeader';
@@ -58,12 +58,45 @@ componentDidMount() {
   });
 }
 
+handleAddRoomie = roomie => {
+  this.setState({
+    roomies: [
+      ...this.state.roomies,
+      roomie
+    ]
+  });
+}
+
+handleDeleteRoomie = roomie_id => {
+  this.setState({
+    roomies: this.state.roomies.filter(roomie => roomie.id !== roomie_id)
+  });
+}
+
+handleAddChore = chore => {
+  this.setState({
+    chores: [
+      ...this.state.chores,
+      chore
+    ]
+  });
+}
+
+handleDeleteChore = chore_id => {
+  this.setState({
+    chores: this.state.chores.filter(chore => chore.id !== chore_id)
+  });
+}
+
   render() {
     const value={
       roomies: this.state.roomies,
-      chores: this.state.chores
+      chores: this.state.chores,
+      addRoomie: this.handleAddRoomie,
+      deleteRoomie: this.handleDeleteRoomie,
+      addChore: this.handleAddChore,
+      deleteChore: this.handleDeleteChore
     }
-
     console.log(value);
 
     return (

@@ -2,12 +2,47 @@ import React, { Component } from 'react';
 import './Roomie.css';
 import Chore from '../Chore/Chore';
 import { Link } from 'react-router-dom';
+import ApiContext from '../ApiContext';
+import config from '../config';
 
 class Roomie extends Component {
+    static defaultProps = {
+        onDeleteRoomie: () => {}
+    }
+
+    static contextType = ApiContext;
+
+    handleClickDelete = e => {   // actually deletes the roomie, but with errors :(
+        e.preventDefault()
+        const roomie_id = this.props.id
+        console.log(roomie_id);
+
+        fetch(`${config.API_ENDPOINT}/roomies/${roomie_id}`, {
+            method: `DELETE`,
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        .then(res => {
+            console.log(res)
+            if(!res.ok) {
+                console.log('I ran');
+                return res.json().then(e => Promise.reject(e))
+            }
+            // this.context.onDeleteRoomie(roomie_id)
+            // this.props.onDeleteRoomie(roomie_id)
+        })
+        .then(() => {
+            this.context.onDeleteRoomie(roomie_id)
+            this.props.onDeleteRoomie(roomie_id)
+        })
+        .catch(error => {
+            console.error({ error })
+        })
+    }
 
     render() {
-
-        const { note, name, chores } = this.props
+        const { name, note, chores } = this.props
         // console.log(this.props);
 
         return(
@@ -22,7 +57,11 @@ class Roomie extends Component {
                         {note}
                     </p>
                 </div>
-                <button type="button" className="removeRoomie">
+                <button 
+                    type="button" 
+                    className="removeRoomie"
+                    onClick={this.handleClickDelete}
+                >
                     Remove
                 </button>
                 <ul className="chores">
