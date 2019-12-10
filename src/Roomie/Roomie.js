@@ -14,7 +14,7 @@ class Roomie extends Component {
             <>
                 <div className="tooltip">
                     <header role="banner" className="tooltipContent">
-                        <h2>
+                        <h2 className="roomieNames">
                             {name}
                         </h2>
                     </header>
@@ -35,7 +35,7 @@ class Roomie extends Component {
                         </li>
                     )}
                 </ul>
-                <button type="button" className="addChore">
+                <button type="button" className="addChoreButton">
                     <Link to='/addChore'>Add a Chore </Link>
                 </button>
             </>
