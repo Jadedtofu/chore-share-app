@@ -15,8 +15,8 @@ class Chore extends Component {
               <p className ="chore">
                 {chore}
               </p>
-              <button type="button">Done</button>
-              <button type="button">Delete</button>
+              <button type="button" className="done-button">Done</button>
+              <button type="button" className="delete-button">Delete</button>
             </>
         )
     }

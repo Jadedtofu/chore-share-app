@@ -6,3 +6,7 @@
 .app-header .app-title {
     font-size: 3em;
 }
+
+.app-title {
+    margin: 2%;
+}

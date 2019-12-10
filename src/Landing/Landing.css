@@ -1,6 +1,10 @@
-.landingPage {
+.landing-page {
     margin-left: auto;
     margin-right: auto;
-    min-height: 600px;
-    max-width: 950px;
+    min-height: 80%;
+    max-width: 80%;
+}
+
+.landing-sub {
+    margin-bottom: 50%;
 }

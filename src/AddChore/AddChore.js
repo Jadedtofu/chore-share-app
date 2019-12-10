@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ShareForm from '../ShareForm/ShareForm';
 import './AddChore.css';
 import ApiContext from '../ApiContext';
+import ValidationError from '../ValidationError/ValidationError';
 import config from '../config';
 
 class AddChore extends Component {
@@ -50,7 +51,7 @@ class AddChore extends Component {
         }, this.formValid);
     }
 
-    validateChoreRoomie(choreRoomie) {
+    validateChoreRoomie(fieldValue) {
         const fieldErrors = {...this.state.validationMessages};
         let hasError = false;
 
@@ -74,7 +75,32 @@ class AddChore extends Component {
     static contextType = ApiContext;
 
     handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
+        const newChore = {
+            chore: e.target['chore-name'].value,
+            roomie_id: e.target['roomie-id'].value
+        }
+
+        fetch(`${config.API_ENDPOINT}/chores`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newChore)
+        })
+        .then(res => {
+            if(!res.ok) {
+                return res.json().then(e => Promise.reject(e));
+            }
+            return res.json()
+        })
+        .then(chore => {
+            this.context.addChore(chore);
+            this.props.history.push(`/home`);
+        })
+        .catch(error => {
+            console.error({ error });
+        });
     }
 
     render() {
@@ -85,18 +111,21 @@ class AddChore extends Component {
             <h2>
                 Add a Chore
             </h2>
-            <ShareForm>
+            <ShareForm onSubmit={this.handleSubmit}>
                 <div className='field'>
                     <label htmlFor="chore-input">
                         Chore
                     </label>
-                    <input type='text' id="chore-input" name='chore-name' placeholder="Take out Trash" required />
+                    <input type='text' id="chore-input" name='chore-name' placeholder="Take out Trash" required 
+                    onChange={e => this.updateChoreChore(e.target.value)} />
+                    <ValidationError hasError={!this.state.choreChoreValid} message={this.state.validationMessages.choreChoreName} />
                 </div>
                 <div className='field'>
                     <label htmlFor="roomie-select">
                         Select a Roomie
                     </label>
-                    <select id="roomie-id" name="roomie-id-select">
+                    <select id="roomie-input" name="roomie-id"
+                    onChange={e => this.updateChoreRoomie(e.target.value)} >
                         <option value="empty">...</option>
                         {roomies.map(roomie => 
                             <option key={roomie.id} value={roomie.id}>
@@ -106,11 +135,11 @@ class AddChore extends Component {
                         {/* <option value="Jane Rom">Jane Rom</option>
                         <option value="James Mor">James Mor</option> */}
                     </select>
+                    <ValidationError hasError={!this.state.choreRoomieValid} message={this.state.validationMessages.choreChoreRoomie} />
                 </div>
                 <div className="buttons">
-                    <button type="submit">
+                    <button type="submit" disabled={!this.state.formValid} >
                         Add chore
-                    {/* This needs to go to /home page when submitted */}
                     </button>
                 </div>
             </ShareForm>

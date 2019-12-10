@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Roomie.css';
 import Chore from '../Chore/Chore';
-import { Link } from 'react-router-dom';
 import ApiContext from '../ApiContext';
 import config from '../config';
 
@@ -51,7 +50,7 @@ class Roomie extends Component {
             <>
                 <div className="tooltip">
                     <header role="banner" className="tooltipContent">
-                        <h2 className="roomieNames">
+                        <h2 className="roomie-names">
                             {name}
                         </h2>
                     </header>
@@ -77,9 +76,9 @@ class Roomie extends Component {
                         </li>
                     )}
                 </ul>
-                <button type="button" className="addChoreButton">
+                {/* <button type="button" className="addChoreButton">
                     <Link to='/add-chore'>Add a Chore </Link>
-                </button>
+                </button> */}
             </>
         )
     }

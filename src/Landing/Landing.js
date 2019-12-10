@@ -5,8 +5,8 @@ import './Landing.css';
 class Landing extends Component {
     render() {
         return (
-            <main className="landingPage">
-                <section className="landingSub">
+            <main className="landing-page">
+                <section className="landing-sub">
                     <header>
                         <h2>Sharing chores we don't want to do, together!</h2>
                     </header>

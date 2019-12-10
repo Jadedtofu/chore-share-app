@@ -55,7 +55,7 @@ class AddRoomie extends Component {
 
     // adds roomie
     handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
         const roomie = {
             name: e.target['roomie-name'].value,
             note: e.target['roomie-note'].value
@@ -73,16 +73,16 @@ class AddRoomie extends Component {
         // })
         .then(res => {
             if (!res.ok) {
-                return res.json().then(e => Promise.reject(e))
+                return res.json().then(e => Promise.reject(e));
             }
             return res.json()
         })
         .then(roomie => {
-            this.context.addRoomie(roomie)
-            this.props.history.push(`/home`)
+            this.context.addRoomie(roomie);
+            this.props.history.push(`/home`);
         }) // this pushes to the endpoint
         .catch(error => {
-            console.error({error})
+            console.error({error});
         });
     }
 
