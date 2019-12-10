@@ -47,7 +47,7 @@ class Home extends Component {
 
             <section className="add-roomie">
                 <button type="button" className="addRoomieButton">
-                    <Link to='/addRoomie'>Add a Roomie</Link>
+                    <Link to='/add-roomie'>Add a Roomie</Link>  
                 </button>
             </section>
         </main>

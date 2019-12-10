@@ -115,12 +115,12 @@ handleDeleteChore = chore_id => {
         />
 
         <Route
-          path='/addChore'
+          path='/add-chore'
           component={AddChore}
         />
 
         <Route
-          path='/addRoomie'
+          path='/add-roomie'
           component={AddRoomie}
         />
 

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class AddChore extends Component {
     render() {
         return (
-        <section className="addChore">
+        <section className="add-chore">
             <h2>
                 Add a Chore
             </h2>

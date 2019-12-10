@@ -75,7 +75,7 @@ class Roomie extends Component {
                     )}
                 </ul>
                 <button type="button" className="addChoreButton">
-                    <Link to='/addChore'>Add a Chore </Link>
+                    <Link to='/add-chore'>Add a Chore </Link>
                 </button>
             </>
         )
