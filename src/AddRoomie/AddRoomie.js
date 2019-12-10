@@ -55,12 +55,11 @@ class AddRoomie extends Component {
 
     // adds roomie, but won't update state until refresh. Also won't go to Home after
     handleSubmit = e => {
+        e.preventDefault()
         const roomie = {
             name: e.target['roomie-name'].value,
             note: e.target['roomie-note'].value
         }
-
-        console.log(e.target.value);
 
         fetch(`${config.API_ENDPOINT}/roomies`, {
             method: 'POST',
@@ -73,13 +72,14 @@ class AddRoomie extends Component {
         //     console.log(roomie);
         // })
         .then(res => {
-            if (!res.ok)
+            if (!res.ok) {
                 return res.json().then(e => Promise.reject(e))
+            }
             return res.json()
         })
         .then(roomie => {
-            this.context.AddRoomie(roomie)
-            this.props.history.push(`/roomies/${roomie.id}`)
+            this.context.addRoomie(roomie)
+            this.props.history.push(`/home`)
         }) // this pushes to the endpoint
         .catch(error => {
             console.error({error})

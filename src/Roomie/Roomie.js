@@ -7,6 +7,10 @@ import config from '../config';
 
 class Roomie extends Component {
     static defaultProps = {
+        history: {
+            push: () => { } 
+        },
+
         onDeleteRoomie: () => {}
     }
 
@@ -33,8 +37,9 @@ class Roomie extends Component {
             // this.props.onDeleteRoomie(roomie_id)
         })
         .then(() => {
-            this.context.onDeleteRoomie(roomie_id)
+            this.context.deleteRoomie(roomie_id)
             this.props.onDeleteRoomie(roomie_id)
+            this.props.history.push(`/home`)
         })
         .catch(error => {
             console.error({ error })
