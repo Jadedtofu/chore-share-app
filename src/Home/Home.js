@@ -8,15 +8,19 @@ class Home extends Component {
     static defaultProps = {
         match: {
           params: {}
+        },
+
+        history: {
+            push: () => { }
         }
       }
     
     static contextType = ApiContext;
 
     // deletes roomie, but doesn't update until refresh, why?
-    handleDeleteRoomie = roomie_id => {
-        this.props.history.push('/')
-        console.log(this.props.history);
+    handleDeleteRoomie = () => {
+        this.props.history.push('/home')
+        // console.log(this.props.history);
     }
 
     // this deletes the roomie but will display errors

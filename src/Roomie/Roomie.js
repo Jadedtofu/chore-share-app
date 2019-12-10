@@ -12,14 +12,15 @@ class Roomie extends Component {
         },
 
         onDeleteRoomie: () => {}
+        
     }
 
     static contextType = ApiContext;
 
-    handleClickDelete = e => {   // actually deletes the roomie, but with errors :(
+    handleClickDelete = e => {   // actually deletes the roomie, but goes to landing page
         e.preventDefault()
         const roomie_id = this.props.id
-        console.log(roomie_id);
+        // console.log(roomie_id);
 
         fetch(`${config.API_ENDPOINT}/roomies/${roomie_id}`, {
             method: `DELETE`,
@@ -28,18 +29,14 @@ class Roomie extends Component {
             }
         })
         .then(res => {
-            console.log(res)
+            // console.log(res)
             if(!res.ok) {
-                console.log('I ran');
                 return res.json().then(e => Promise.reject(e))
             }
-            // this.context.onDeleteRoomie(roomie_id)
-            // this.props.onDeleteRoomie(roomie_id)
         })
         .then(() => {
             this.context.deleteRoomie(roomie_id)
             this.props.onDeleteRoomie(roomie_id)
-            this.props.history.push(`/home`)
         })
         .catch(error => {
             console.error({ error })

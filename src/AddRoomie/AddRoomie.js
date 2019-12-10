@@ -53,7 +53,7 @@ class AddRoomie extends Component {
 
     static contextType = ApiContext;
 
-    // adds roomie, but won't update state until refresh. Also won't go to Home after
+    // adds roomie
     handleSubmit = e => {
         e.preventDefault()
         const roomie = {
