@@ -25,16 +25,20 @@ class Chore extends Component {
   handleClickCheckChore = e => {
     e.preventDefault();
     const chore = this.props.chore
-    let choreChecked = this.props.checked;
+    // let choreChecked = this.props.checked;
     // console.log(chore);
     // console.log(choreChecked);
     
     this.context.checkChore(chore);
     this.props.onCheckChore(chore);
 
+    // this.setState({
+    //   choreChecked: !choreChecked
+    // })
+
     this.setState({
-      choreChecked: !choreChecked
-    })
+      choreChecked: !this.state.choreChecked
+    });
   }
 
   handleClickDeleteChore = e => {
@@ -72,7 +76,7 @@ class Chore extends Component {
               </p>
               <button type="button" className="done-button"
                 onClick={this.handleClickCheckChore}>
-                  Done
+                {this.state.choreChecked ? 'Undo' : 'Done'}
               </button>
               <button type="button" className="delete-button"
                 onClick={this.handleClickDeleteChore}>
