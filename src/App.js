@@ -110,7 +110,7 @@ handleDeleteChore = chore_id => {
       checkChore: this.handleCheckChore,
       deleteChore: this.handleDeleteChore
     }
-    console.log(value);
+    // console.log(value);
 
     return (
       <ApiContext.Provider value={value}>
