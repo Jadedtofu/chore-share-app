@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Chore.css';
 import ApiContext from '../ApiContext';
 import config from '../config';
-import { promised } from 'q';
 
 class Chore extends Component {
   static defaultProps = {
@@ -10,15 +9,38 @@ class Chore extends Component {
       params: {}
     },
 
-    onDeleteChore: () => {}
+    onCheckChore: () => {},
+    onDeleteChore: () => {},
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      choreChecked: false
+    }
   }
 
   static contextType = ApiContext;
 
+  handleClickCheckChore = e => {
+    e.preventDefault();
+    const chore = this.props.chore
+    let choreChecked = this.props.checked;
+    // console.log(chore);
+    // console.log(choreChecked);
+    
+    this.context.checkChore(chore);
+    this.props.onCheckChore(chore);
+
+    this.setState({
+      choreChecked: !choreChecked
+    })
+  }
+
   handleClickDeleteChore = e => {
     e.preventDefault();
     const chore_id = this.props.id
-    console.log(chore_id);
+    // console.log(chore_id);
 
     fetch(`${config.API_ENDPOINT}/chores/${chore_id}`, {
       method: `DELETE`,
@@ -41,20 +63,19 @@ class Chore extends Component {
   }
 
     render() {
-        const { chore, checked } = this.props;
+        const { chore } = this.props;
         // console.log(this.props);
-
-        // will have to do something with the checked prop for crossing out chore
-
         return(
             <>
-              <p className ="chore">
+              <p className={this.state.choreChecked ? "chore linethrough" : "chore"} >
                 {chore}
               </p>
-              <button type="button" className="done-button">Done</button>
+              <button type="button" className="done-button"
+                onClick={this.handleClickCheckChore}>
+                  Done
+              </button>
               <button type="button" className="delete-button"
-                onClick={this.handleClickDeleteChore}
-              >
+                onClick={this.handleClickDeleteChore}>
                   Delete
               </button>
             </>

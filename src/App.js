@@ -82,6 +82,18 @@ handleAddChore = chore => {
   });
 }
 
+handleCheckChore = chore => {
+  const checkedChore = this.state.chores.map(item => {
+    if (item === chore) {
+      item.checked = !item.checked
+    }
+    return item;
+  })
+  this.setState({
+    chores: checkedChore
+  })
+}
+
 handleDeleteChore = chore_id => {
   this.setState({
     chores: this.state.chores.filter(chore => chore.id !== chore_id)
@@ -95,6 +107,7 @@ handleDeleteChore = chore_id => {
       addRoomie: this.handleAddRoomie,
       deleteRoomie: this.handleDeleteRoomie,
       addChore: this.handleAddChore,
+      checkChore: this.handleCheckChore,
       deleteChore: this.handleDeleteChore
     }
     console.log(value);

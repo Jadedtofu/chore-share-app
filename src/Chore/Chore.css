@@ -6,6 +6,11 @@ p {
     margin: 0%;
     padding-top: 0.5%;
     padding-bottom: 0%;
+
+}
+
+.linethrough {
+    text-decoration-line: line-through;
 }
 
 .done-button,

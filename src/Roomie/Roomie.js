@@ -43,6 +43,10 @@ class Roomie extends Component {
         });
     }
 
+    handleCheckChore = () => {
+        this.props.history.push('/home')
+    }
+
     handleDeleteChore = () => {
         this.props.history.push('/home')
     }
@@ -77,6 +81,7 @@ class Roomie extends Component {
                                    chore={chore.chore}
                                    checked={chore.checked}
                                    roomie_id={chore.roomie_id}
+                                   onCheckChore={this.handleCheckChore}
                                    onDeleteChore={this.handleDeleteChore}
                             />
                         </li>
