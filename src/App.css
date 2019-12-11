@@ -20,13 +20,9 @@ body p {
   padding: 1% 5%;
 }
 
-nav,
-footer {
-  padding: 1% 0;
-  background-color: rgb(255, 173, 96);
-}
-
 nav {
+  background-color: rgb(255, 173, 96);
+  padding: 1% 0;
   position: fixed;
   top: 0;
   left: 0;

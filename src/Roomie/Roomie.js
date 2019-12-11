@@ -63,9 +63,10 @@ class Roomie extends Component {
                             {name}
                         </h2>
                     </header>
+                    {!this.props.note ? null : 
                     <p className={!this.props.note ? null : "tooltipMessage"} >
                         {note}
-                    </p>
+                    </p>}
                 </div>
                 <button 
                     type="button" 
