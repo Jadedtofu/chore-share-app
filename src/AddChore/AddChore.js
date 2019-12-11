@@ -116,7 +116,7 @@ class AddChore extends Component {
                     <label htmlFor="chore-input">
                         Chore
                     </label>
-                    <input type='text' id="chore-input" name='chore-name' placeholder="Take out Trash" required 
+                    <input type='text' id="chore-input" name='chore-name' placeholder="Take out the trash" required 
                     onChange={e => this.updateChoreChore(e.target.value)} />
                     <ValidationError hasError={!this.state.choreChoreValid} message={this.state.validationMessages.choreChoreName} />
                 </div>

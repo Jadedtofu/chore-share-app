@@ -6,18 +6,19 @@ import config from '../config';
 
 class Roomie extends Component {
     static defaultProps = {
+        match: {
+            params: {}
+        },
         history: {
             push: () => { } 
         },
-
         onDeleteRoomie: () => {}
-        
     }
 
     static contextType = ApiContext;
 
-    handleClickDelete = e => {   // actually deletes the roomie, but goes to landing page
-        e.preventDefault()
+    handleClickDeleteRoomie = e => {   // actually deletes the roomie, but goes to landing page
+        e.preventDefault();
         const roomie_id = this.props.id
         // console.log(roomie_id);
 
@@ -39,7 +40,11 @@ class Roomie extends Component {
         })
         .catch(error => {
             console.error({ error })
-        })
+        });
+    }
+
+    handleDeleteChore = () => {
+        this.props.history.push('/home')
     }
 
     render() {
@@ -61,7 +66,7 @@ class Roomie extends Component {
                 <button 
                     type="button" 
                     className="removeRoomie"
-                    onClick={this.handleClickDelete}
+                    onClick={this.handleClickDeleteRoomie}
                 >
                     Remove
                 </button>
@@ -72,13 +77,11 @@ class Roomie extends Component {
                                    chore={chore.chore}
                                    checked={chore.checked}
                                    roomie_id={chore.roomie_id}
+                                   onDeleteChore={this.handleDeleteChore}
                             />
                         </li>
                     )}
                 </ul>
-                {/* <button type="button" className="addChoreButton">
-                    <Link to='/add-chore'>Add a Chore </Link>
-                </button> */}
             </>
         )
     }
