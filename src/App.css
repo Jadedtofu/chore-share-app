@@ -8,8 +8,8 @@ a {
 }
 
 body {
-  font-family: "Open Sans",
-  sans-serif; 
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: 'Gaegu', cursive;
   font-size: 20px;
   color: #444;
   text-align: center;
