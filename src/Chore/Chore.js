@@ -71,6 +71,7 @@ class Chore extends Component {
         // console.log(this.props);
         return(
             <>
+            <div className="chore-color-select">
               <p className={this.state.choreChecked ? "chore linethrough" : "chore"} >
                 {chore}
               </p>
@@ -82,6 +83,7 @@ class Chore extends Component {
                 onClick={this.handleClickDeleteChore}>
                   Delete
               </button>
+            </div>
             </>
         )
     }

@@ -29,6 +29,11 @@ nav.top li::after {
     font-weight: bold;
 }
 
+.app-home a:hover {
+    transition: 0.2s ease-out;
+    color: rgb(255, 243, 235);
+}
+
 @media screen and (min-width: 320px) and (max-width: 400px){
     nav {
         padding: 1.8% 0%;

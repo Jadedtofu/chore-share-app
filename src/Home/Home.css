@@ -30,10 +30,12 @@ ul {
 }
 
 .add-chore-btn:hover {
+    transition: 0.2s ease-out;
     background-color: rgb(25, 146, 55);
 }
 
 .add-roomie-btn:hover {
+    transition: 0.2s ease-out;
     background-color: rgb(255, 135, 22);
 }
 

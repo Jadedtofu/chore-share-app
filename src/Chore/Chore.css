@@ -9,6 +9,11 @@ p {
     padding-bottom: 0%;
 }
 
+.chore-color-select:hover {
+    background-color:  rgb(253, 219, 188);
+    transition: 0.5s ease-out;
+}
+
 .linethrough {
     text-decoration-line: line-through;
 }
@@ -27,14 +32,17 @@ p {
 }
 
 .done-btn:hover {
+    transition: 0.2s ease-out;
     background-color: rgb(25, 146, 55);
 }
 
 .undo-btn:hover {
+    transition: 0.2s ease-out;
     background-color: rgb(255, 135, 22);
 }
 
 .delete-btn:hover {
+    transition: 0.2s ease-out;
     background-color: rgb(255, 50, 14);
 }
 
