@@ -13,7 +13,7 @@
 }
 
 .app-title a:active {
-    transition: 0.2s ease-out;
+    transition: 0.1s ease-out;
     color: rgb(255, 135, 22);
 }
 
