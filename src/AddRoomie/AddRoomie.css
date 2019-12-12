@@ -1,5 +1,6 @@
 .add-roomie-text {
     color: rgb(255, 135, 22);
+    cursor: default;
     margin-left: auto;
     margin-right: auto;
 }

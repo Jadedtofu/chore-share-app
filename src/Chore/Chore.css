@@ -10,6 +10,7 @@ p {
 }
 
 .chore-color-select:hover {
+    cursor: default;
     background-color:  rgb(253, 219, 188);
     transition: 0.5s ease-out;
 }

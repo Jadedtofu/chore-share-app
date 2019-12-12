@@ -1,10 +1,15 @@
 
 
 .landing-page {
+
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
     max-width: 80%;
+}
+
+.landing-page:hover {
+    cursor: default;
 }
 
 .landing-sub {
