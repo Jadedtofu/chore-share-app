@@ -33,3 +33,17 @@
 .error {
     color:  rgb(255, 50, 14);
 }
+
+@media screen and (min-width: 320px) and (max-width: 400px){
+    .add-roomie-form-btn {
+        padding: 4% 5% 4% 5%;
+    }
+
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    .add-roomie-form-btn {
+        padding: 3.5% 4.5% 3.5% 4.5%;
+    }
+
+}

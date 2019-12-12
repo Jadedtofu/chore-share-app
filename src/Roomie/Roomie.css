@@ -38,15 +38,15 @@ p {
 }
 
 .tooltipMessage {
-    background-color: rgb(74, 73, 80);
-    border-radius: 3px;
-    color: rgb(255, 243, 235);
+    background-color: rgb(255, 166, 82);
+    border-radius: 5px;
+    color: rgb(74, 73, 80);
     left: 30%;
     right: 30%;
     padding: 7px 10px;
     position: absolute;
     text-align: center;
-    top: calc(-1.2em - 14px);
+    top: calc(-1.2em - 10px);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
@@ -55,4 +55,92 @@ p {
 .tooltip:hover > .tooltipMessage {
     opacity: 1;
     visibility: visible;
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px){
+    .remove-roomie-btn {
+        margin-bottom: 5%;
+        padding: 3% 4.5% 3% 4.5%;
+    }
+
+    .roomie-names {
+        font-size: 1.45em;
+    }
+
+    .tooltipMessage {
+        font-size: 0.75em;
+        left: 2%;
+        right: 2%;
+        top: calc(-1.2em - -5px);
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    .tooltipMessage {
+        font-size: 0.85em;
+        left: 8%;
+        right: 8%;
+        top: calc(-1.2em - -2px);
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .remove-roomie-btn {
+        font-size: 0.9em;
+        margin-bottom: 5%;
+        padding: 2.5% 4.2% 2.5% 4.2%;
+    }
+
+    .tooltipMessage {
+        left: 20%;
+        right: 20%;
+        top: calc(-1.2em - 5px);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .remove-roomie-btn {
+        font-size: 0.9em;
+        margin-bottom: 5%;
+        padding: 2% 3.8% 2% 3.8%;
+    }
+
+    .roomie-names {
+        font-size: 1.9em;
+    }
+
+    .tooltipMessage {
+        left: 25%;
+        right: 25%;
+        top: calc(-1.2em - 8px);
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1185px) {
+    .remove-roomie-btn {
+        font-size: 0.9em;
+        margin-bottom: 4%;
+        padding: 1.5% 3% 1.5% 3%;
+    }
+
+    .roomie-names {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1186px) and (max-width: 3000px) {
+    .remove-roomie-btn {
+        font-size: 0.9em;
+        margin-bottom: 3%;
+        padding: 1% 2.5% 1% 2.5%;
+    }
+
+    .roomie-names {
+        font-size: 2em;
+    }
+
+    .tooltipMessage {
+        left: 35%;
+        right: 35%;
+    }
 }
