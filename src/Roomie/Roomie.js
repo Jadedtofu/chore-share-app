@@ -58,13 +58,13 @@ class Roomie extends Component {
         return(
             <>
                 <div className="tooltip">
-                    <header role="banner" className="tooltipContent">
+                    <header role="banner" className="tooltip-content">
                         <h2 className="roomie-names">
                             {name}
                         </h2>
                     </header>
                     {!this.props.note ? null : 
-                    <p className={!this.props.note ? null : "tooltipMessage"} >
+                    <p className={!this.props.note ? null : "tooltip-message"} >
                         {note}
                     </p>}
                 </div>

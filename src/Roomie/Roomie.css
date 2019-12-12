@@ -33,11 +33,11 @@ p {
     cursor: default;
   }
   
-.tooltipContent {
+.tooltip-content {
     color: rgb(255, 135, 22);
 }
 
-.tooltipMessage {
+.tooltip-message {
     background-color: rgb(255, 166, 82);
     border-radius: 5px;
     color: rgb(74, 73, 80);
@@ -52,7 +52,7 @@ p {
     visibility: hidden;
 }
 
-.tooltip:hover > .tooltipMessage {
+.tooltip:hover > .tooltip-message {
     opacity: 1;
     visibility: visible;
 }
@@ -67,7 +67,7 @@ p {
         font-size: 1.45em;
     }
 
-    .tooltipMessage {
+    .tooltip-message {
         font-size: 0.75em;
         left: 2%;
         right: 2%;
@@ -76,7 +76,7 @@ p {
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
-    .tooltipMessage {
+    .tooltip-message {
         font-size: 0.85em;
         left: 8%;
         right: 8%;
@@ -91,7 +91,7 @@ p {
         padding: 2.5% 4.2% 2.5% 4.2%;
     }
 
-    .tooltipMessage {
+    .tooltip-message {
         left: 20%;
         right: 20%;
         top: calc(-1.2em - 5px);
@@ -109,7 +109,7 @@ p {
         font-size: 1.9em;
     }
 
-    .tooltipMessage {
+    .tooltip-message {
         left: 25%;
         right: 25%;
         top: calc(-1.2em - 8px);
@@ -139,7 +139,7 @@ p {
         font-size: 2em;
     }
 
-    .tooltipMessage {
+    .tooltip-message {
         left: 35%;
         right: 35%;
     }
