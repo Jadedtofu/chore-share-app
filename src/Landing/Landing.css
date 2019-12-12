@@ -95,7 +95,7 @@
     }
 
     .together-btn {
-        font-size: 0.9em;
+        font-size: 0.95em;
         padding: 3% 5% 3% 5%;
     }
 }
@@ -122,6 +122,6 @@
 
 @media screen and (min-width: 1186px) and (max-width: 3000px) {
     .together-btn {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
