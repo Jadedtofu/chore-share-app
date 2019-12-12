@@ -74,11 +74,11 @@ class Chore extends Component {
               <p className={this.state.choreChecked ? "chore linethrough" : "chore"} >
                 {chore}
               </p>
-              <button type="button" className="done-button"
+              <button type="button" className={this.state.choreChecked ? "undo-btn" : "done-btn" }
                 onClick={this.handleClickCheckChore}>
                 {this.state.choreChecked ? 'Undo' : 'Done'}
               </button>
-              <button type="button" className="delete-button"
+              <button type="button" className="delete-btn"
                 onClick={this.handleClickDeleteChore}>
                   Delete
               </button>

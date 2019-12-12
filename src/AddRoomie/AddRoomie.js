@@ -88,8 +88,8 @@ class AddRoomie extends Component {
 
     render() {
         return (
-        <section className="add-roomie">
-            <h2>
+        <main className="add-roomie-page">
+            <h2 className="add-roomie-text">
                 Add a Roomie
             </h2>
             <ShareForm onSubmit={this.handleSubmit}>
@@ -108,12 +108,12 @@ class AddRoomie extends Component {
                     <textarea id="roomie-note-input" name='roomie-note' rows="6" placeholder="Rooming for 6 months, likes cats" />
                 </div>
                 <div className="buttons">
-                    <button type="submit" disabled={!this.state.formValid}>
+                    <button type="submit" className="add-roomie-form-btn" disabled={!this.state.formValid}>
                         Add Roomie
                     </button>
                 </div>
             </ShareForm>
-        </section>
+        </main>
         );
     }
 }

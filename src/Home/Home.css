@@ -12,11 +12,31 @@ ul {
     padding-bottom: 2%;
 }
 
-.add-chore-button,
-.add-roomie-button {
-    margin: 1%;
+.add-chore-btn a,
+.add-roomie-btn a {
+    color: rgb(255, 243, 235);
+}
+
+.add-chore-btn,
+.add-roomie-btn {
+    background-color: rgb(90, 89, 97);
+    border: 0px;
+    border-radius: 5px;
+    color: rgb(255, 243, 235);
+    cursor: pointer;
+    font-size: 0.8em;
+    margin: 2%;
+    padding: 2.5% 4% 2.5% 4%;
+}
+
+.add-chore-btn:hover {
+    background-color: rgb(25, 146, 55);
+}
+
+.add-roomie-btn:hover {
+    background-color: rgb(255, 135, 22);
 }
 
 .roomie {
-    padding-bottom: 3%;
+    padding-bottom: 5%;
 }

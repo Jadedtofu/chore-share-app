@@ -107,10 +107,11 @@ class AddChore extends Component {
         const { roomies=[] } = this.context;
 
         return (
-        <section className="add-chore">
-            <h2>
+        <main className="add-chore-page">
+            <h2 className="add-chore-text">
                 Add a Chore
             </h2>
+
             <ShareForm onSubmit={this.handleSubmit}>
                 <div className='field'>
                     <label htmlFor="chore-input">
@@ -138,12 +139,12 @@ class AddChore extends Component {
                     <ValidationError hasError={!this.state.choreRoomieValid} message={this.state.validationMessages.choreChoreRoomie} />
                 </div>
                 <div className="buttons">
-                    <button type="submit" disabled={!this.state.formValid} >
-                        Add chore
+                    <button type="submit" className="add-chore-form-btn" disabled={!this.state.formValid} >
+                        Add Chore
                     </button>
                 </div>
             </ShareForm>
-        </section>
+        </main>
         );
     }
 }

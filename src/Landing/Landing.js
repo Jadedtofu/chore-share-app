@@ -8,12 +8,12 @@ class Landing extends Component {
             <main className="landing-page">
                 <section className="landing-sub">
                     <header>
-                        <h2>Sharing chores we don't want to do, together!</h2>
+                        <h2 className="sub-header">Sharing chores we don't want to do, together!</h2>
                     </header>
-                    <p>
+                    <p className="sub-text">
                         Chore Share will let roomies share chores in one place! Click "Together!" to get started. Next, click "Add a Roomie" to add you and your roommate(s). Then click "Add a Chore" and select a roomie to start keeping track of each other's chores.
                     </p>
-                    <button type="button"><Link to='/home'>Together!</Link></button>
+                    <button type="button" className="together-btn"><Link to='/home'>Together!</Link></button>
                 </section>
             </main>
         );

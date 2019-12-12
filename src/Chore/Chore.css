@@ -3,17 +3,37 @@ p {
 }
 
 .chore {
-    margin: 0%;
+    font-size: 1.3em;
+    margin: 1% 0% 0% 0%;
     padding-top: 0.5%;
     padding-bottom: 0%;
-
 }
 
 .linethrough {
     text-decoration-line: line-through;
 }
 
-.done-button,
-.delete-button {
-    margin: 0.5%;
+.done-btn,
+.delete-btn,
+.undo-btn {
+    background-color: rgb(126, 124, 134);
+    border: 0px;
+    border-radius: 5px;
+    color: rgb(255, 243, 235);
+    cursor: pointer;
+    font-size: 0.7em;
+    margin: 1.5%;
+    padding: 1.8% 3.5% 1.8% 3.5%;
+}
+
+.done-btn:hover {
+    background-color: rgb(25, 146, 55);
+}
+
+.undo-btn:hover {
+    background-color: rgb(255, 135, 22);
+}
+
+.delete-btn:hover {
+    background-color: rgb(255, 50, 14);
 }

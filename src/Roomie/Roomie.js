@@ -70,7 +70,7 @@ class Roomie extends Component {
                 </div>
                 <button 
                     type="button" 
-                    className="removeRoomie"
+                    className="remove-roomie-btn"
                     onClick={this.handleClickDeleteRoomie}
                 >
                     Remove

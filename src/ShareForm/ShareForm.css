@@ -10,14 +10,14 @@ form {
 
 .shareform label {
     display: block;
-    font-size: 16px;
+    font-size: 1em;
     padding-bottom: 8px;
 }
 
 .shareform input,
 .shareform textarea,
 .shareform select {
-  font-size: 14px;
+  font-size: 0.75em;
   padding: 8px;
   width: 325px;
 }

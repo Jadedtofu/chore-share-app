@@ -13,3 +13,8 @@ nav.top li::after {
     content: "";
     padding-right: 30px;
 }
+
+.app-home {
+    font-size: 1.1em;
+    font-weight: bold;
+}

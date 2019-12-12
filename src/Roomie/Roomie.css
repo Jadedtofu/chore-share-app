@@ -2,31 +2,45 @@ p {
     padding: 0;
 }
 
-.removeRoomie {
+.remove-roomie-btn {
+    background-color: rgb(90, 89, 97);
+    border: 0px;
+    border-radius: 5px;
+    color: rgb(255, 243, 235);
+    cursor: pointer;
     display: block;
+    font-size: 0.75em;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0.5%;
     margin-bottom: 2%;
+    padding: 2.5% 4% 2.5% 4%;
+}
+
+.remove-roomie-btn:hover {
+    background-color: rgb(255, 50, 14);
 }
 
 .roomie-names {
+    font-size: 1.8em;
+    font-weight: bold;
     margin: 0%;
     padding-bottom: 0.5%;
 }
 
 .tooltip {
     position: relative;
-    cursor: pointer;
+    cursor: default;
   }
   
 .tooltipContent {
-    color: rgb(248, 140, 38);
+    color: rgb(255, 135, 22);
 }
 
 .tooltipMessage {
-    background-color: hsla(0, 0%, 10%, 0.9);
+    background-color: rgb(74, 73, 80);
     border-radius: 3px;
-    color: #fff;
+    color: rgb(255, 243, 235);
     left: 30%;
     right: 30%;
     padding: 7px 10px;

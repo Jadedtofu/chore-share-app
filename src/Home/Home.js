@@ -47,11 +47,11 @@ class Home extends Component {
             )}
 
             <section className="add-buttons">
-                <button type="button" className="add-roomie-button">
+                <button type="button" className="add-roomie-btn">
                     <Link to='/add-roomie'>Add a Roomie</Link>  
                 </button>
 
-                <button type="button" className="add-chore-button">
+                <button type="button" className="add-chore-btn">
                     <Link to='/add-chore'>Add a Chore </Link>
                 </button>
             </section>

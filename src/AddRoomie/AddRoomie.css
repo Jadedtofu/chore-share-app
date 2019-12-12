@@ -1,9 +1,35 @@
-.add-roomie h2 {
+.add-roomie-text {
+    color: rgb(255, 135, 22);
     margin-left: auto;
     margin-right: auto;
 }
 
-.add-roomie {
+.add-roomie-page {
     margin-bottom: 30%;
     padding: 0% 5% 5% 5%;
+}
+
+.add-roomie-form-btn {
+    background-color: rgb(74, 73, 80);
+    border: 0px;
+    border-radius: 5px;
+    color: rgb(255, 243, 235);
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 5%;
+    padding: 3% 4.5% 3% 4.5%;
+}
+
+.add-roomie-form-btn:hover {
+    background-color: rgb(255, 135, 22);
+}
+
+.add-roomie-form-btn:disabled {
+    color: rgb(187, 187, 197);
+    cursor: default;
+    background-color: rgb(209, 106, 87);
+}
+
+.error {
+    color:  rgb(255, 50, 14);
 }

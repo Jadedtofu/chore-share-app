@@ -1,3 +1,5 @@
+
+
 .landing-page {
     margin-left: auto;
     margin-right: auto;
@@ -6,5 +8,33 @@
 }
 
 .landing-sub {
+    margin-top: 3%;
     margin-bottom: 30%;
+}
+
+.sub-header {
+    color: rgb(255, 135, 22);
+}
+
+.sub-text {
+    margin-top: 3%;
+}
+
+.together-btn a {
+    color: rgb(255, 243, 235);
+}
+
+.together-btn {
+    background-color: rgb(74, 73, 80);
+    border: 0px;
+    border-radius: 5px;
+    color: rgb(255, 243, 235);
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 5%;
+    padding: 2% 3% 2% 3%;
+}
+
+.together-btn:hover {
+    background-color: rgb(255, 135, 22);
 }
