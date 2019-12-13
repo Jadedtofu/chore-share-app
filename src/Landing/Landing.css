@@ -39,6 +39,7 @@
     color: rgb(255, 243, 235);
     cursor: pointer;
     font-size: 0.9em;
+    font-weight: bold;
     margin-top: 5%;
     padding: 2% 3% 2% 3%;
 }
@@ -48,13 +49,18 @@
 }
 
 .together-btn:hover {
-    transition: 0.2s ease-out;
     background-color: rgb(255, 135, 22);
+    border-color: rgb(74, 73, 80);
+    transition: 0.2s ease-out;
 }
 
 .together-btn a:hover {
     color: rgb(74, 73, 80);
     transition: 0.2s ease-out;
+}
+
+.together-btn a:focus {
+    color: rgb(126, 124, 134);
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px){
