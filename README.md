@@ -8,7 +8,9 @@ To view the live demo, please [click here](https://chore-share-app.now.sh/).
 
 ![Chore Share screenshots](/screenshots/screenshots.jpg "Chore Share Screenshots")
 
-##Technologies Used
+----
+
+## Technologies Used
 - React
 - HTML
 - CSS
