@@ -9,6 +9,7 @@ class Roomie extends Component {
         match: {
             params: {}
         },
+        
         history: {
             push: () => { } 
         },
@@ -17,10 +18,9 @@ class Roomie extends Component {
 
     static contextType = ApiContext;
 
-    handleClickDeleteRoomie = e => {   // actually deletes the roomie, but goes to landing page
+    handleClickDeleteRoomie = e => {   // deletes the roomie
         e.preventDefault();
         const roomie_id = this.props.id
-        // console.log(roomie_id);
 
         fetch(`${config.API_ENDPOINT}/roomies/${roomie_id}`, {
             method: `DELETE`,
@@ -29,7 +29,6 @@ class Roomie extends Component {
             }
         })
         .then(res => {
-            // console.log(res)
             if(!res.ok) {
                 return res.json().then(e => Promise.reject(e))
             }
@@ -53,7 +52,6 @@ class Roomie extends Component {
 
     render() {
         const { name, note, chores } = this.props
-        // console.log(this.props);
 
         return(
             <>

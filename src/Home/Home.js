@@ -9,6 +9,7 @@ class Home extends Component {
         match: {
             params: {}
         },
+
         history: {
             push: () => { }
         }
@@ -19,20 +20,16 @@ class Home extends Component {
     // deletes roomie and pushes to home page
     handleDeleteRoomie = () => {
         this.props.history.push('/home')
-        // console.log(this.props.history);
     }
 
     render() {
         const { roomies=[], chores=[] } = this.context;
-        // const { roomie_id } = this.props.match.params
-        // console.log(this.context);
 
         const getChoresForRoomie = (chores=[], roomieId) => (
             (!roomieId)
             ? chores
             : chores.filter(chore => chore.roomie_id === roomieId)
         );
-        // console.log(getChoresForRoomie(chores, 2))
 
         return(
         <main className="home-page">
