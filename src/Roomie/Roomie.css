@@ -3,10 +3,10 @@ p {
 }
 
 .remove-roomie-btn {
-    background-color: rgb(90, 89, 97);
-    border: 0px;
+    background-color: rgb(255, 246, 242);
+    border: 2px solid;
     border-radius: 5px;
-    color: rgb(255, 243, 235);
+    color: rgb(255, 135, 22);
     cursor: pointer;
     font-size: 0.8em;
     margin-left: auto;
@@ -17,8 +17,10 @@ p {
 }
 
 .remove-roomie-btn:hover {
-    transition: 0.2s ease-out;
     background-color: rgb(255, 50, 14);
+    color:  rgb(255, 243, 235);
+    border-color: rgb(74, 73, 80);
+    transition: 0.2s ease-out;
 }
 
 .roomie-names {
@@ -89,7 +91,7 @@ p {
     .remove-roomie-btn {
         font-size: 0.9em;
         margin-bottom: 2.5%;
-        padding: 2.5% 4.2% 2.5% 4.2%;
+        padding: 2.2% 4.2% 2.2% 4.2%;
     }
 
     .tooltip-message {
@@ -103,7 +105,7 @@ p {
     .remove-roomie-btn {
         font-size: 0.9em;
         margin-bottom: 2%;
-        padding: 2% 3.8% 2% 3.8%;
+        padding: 1.6% 3.3% 1.6% 3.3%;
     }
 
     .roomie-names {
@@ -129,11 +131,11 @@ p {
     }
 }
 
-@media screen and (min-width: 1186px) and (max-width: 3000px) {
+@media screen and (min-width: 1186px) and (max-width: 4000px) {
     .remove-roomie-btn {
         font-size: 0.9em;
         margin-bottom: 1%;
-        padding: 1% 2.5% 1% 2.5%;
+        padding: 1% 2% 1% 2%;
     }
 
     .roomie-names {

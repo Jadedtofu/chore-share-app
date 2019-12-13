@@ -9,6 +9,12 @@ p {
     padding-bottom: 0%;
 }
 
+.chore-color-select {
+    border: none;
+    border-radius: 5px;
+    padding-bottom: 1%;
+}
+
 .chore-color-select:hover {
     cursor: default;
     background-color:  rgb(253, 219, 188);
@@ -20,11 +26,11 @@ p {
 }
 
 .done-btn,
-.delete-btn,
 .undo-btn {
     background-color: rgb(126, 124, 134);
-    border: 0px;
+    border: 2px solid;
     border-radius: 5px;
+    border-color: rgb(74, 73, 80);
     color: rgb(255, 243, 235);
     cursor: pointer;
     font-size: 0.7em;
@@ -32,19 +38,36 @@ p {
     padding: 1.8% 3.5% 1.8% 3.5%;
 }
 
+.delete-btn {
+    /* background-color: rgb(126, 124, 134); */
+    background-color: rgb(255, 246, 242);
+    border: 2px solid;
+    border-radius: 5px;
+    /* color: rgb(255, 243, 235); */
+    color: rgb(126, 124, 134);
+    cursor: pointer;
+    font-size: 0.7em;
+    margin: 1.5%;
+    padding: 1.8% 3.5% 1.8% 3.5%;
+}
+
 .done-btn:hover {
-    transition: 0.2s ease-out;
     background-color: rgb(25, 146, 55);
+    border-color: rgb(122, 120, 129);
+    transition: 0.2s ease-out;
 }
 
 .undo-btn:hover {
-    transition: 0.2s ease-out;
     background-color: rgb(255, 135, 22);
+    border-color: rgb(122, 120, 129);
+    transition: 0.2s ease-out;
 }
 
 .delete-btn:hover {
-    transition: 0.2s ease-out;
+    color: rgb(255, 243, 235);
     background-color: rgb(255, 50, 14);
+    border-color: rgb(74, 73, 80);
+    transition: 0.2s ease-out;
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px){
@@ -80,7 +103,7 @@ p {
     }
 }
 
-@media screen and (min-width: 1186px) and (max-width: 3000px) {
+@media screen and (min-width: 1186px) and (max-width: 4000px) {
     .done-btn,
     .delete-btn,
     .undo-btn {

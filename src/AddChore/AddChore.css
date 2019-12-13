@@ -69,7 +69,7 @@
     }
 }
 
-@media screen and (min-width: 1186px) and (max-width: 3000px) {
+@media screen and (min-width: 1186px) and (max-width: 4000px) {
     .add-chore-text {
         font-size: 1.8em;
     }

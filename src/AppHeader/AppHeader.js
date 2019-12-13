@@ -6,7 +6,7 @@ class AppHeader extends Component {
     render() {
         return (
             <header className="app-header" role="banner">
-                <h1 className="app-title"><Link to='/'>Chore Share</Link></h1>
+                <h1 className="app-title"><Link to='/'><i className="fas fa-clipboard-check"></i> Chore Share </Link></h1>
             </header>
         );
     }

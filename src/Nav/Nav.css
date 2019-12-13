@@ -31,8 +31,19 @@ nav.top li::after {
 
 .app-home a:active {
     transition: 0.1s ease-out;
+    color: rgb(74, 73, 80);
+}
+
+.app-home a:focus {
+    color: rgb(74, 73, 80);
+    border-bottom: 2px solid;
+}
+
+.app-home a:hover {
+    transition: 0.2s ease-out;
     color: rgb(255, 243, 235);
 }
+
 
 @media screen and (min-width: 320px) and (max-width: 400px){
     nav {
@@ -64,7 +75,7 @@ nav.top li::after {
     }
 }
 
-@media screen and (min-width: 1186px) and (max-width: 3000px) {
+@media screen and (min-width: 1186px) and (max-width: 4000px) {
     nav {
         padding: 0.8% 0%;
     }

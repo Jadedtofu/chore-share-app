@@ -85,7 +85,7 @@ form {
     }
 }
 
-@media screen and (min-width: 1186px) and (max-width: 3000px) {
+@media screen and (min-width: 1186px) and (max-width: 4000px) {
     .shareform input,
     .shareform textarea,
     .shareform select {
