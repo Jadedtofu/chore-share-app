@@ -6,7 +6,7 @@ This portion is the React front-end for viewing and editing information using th
 
 To view the live demo, please [click here](https://chore-share-app.now.sh/).
 
-![Chore Share screenshots](/screenshots/screenshots-1.jpg "Chore Share Screenshots")
+![Chore Share screenshots](/screenshots/screenshots.jpg "Chore Share Screenshots")
 
 ----
 
