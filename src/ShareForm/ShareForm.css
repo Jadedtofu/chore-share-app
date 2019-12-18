@@ -3,6 +3,10 @@ form {
     margin-right: auto;
 }
 
+select {
+    background-color: transparent;
+}
+
 .shareform {
     padding: 16px;
     max-width: 400px;
@@ -40,7 +44,6 @@ select:hover {
     outline-color: rgb(255, 135, 22);
     background-color:  rgb(253, 219, 188);
     transition: 0.5s ease-out;
-    outline: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px){
