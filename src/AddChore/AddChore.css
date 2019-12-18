@@ -1,9 +1,8 @@
 .add-chore-text {
-    color: rgb(255, 135, 22);
+    color: rgb(74, 73, 80);
     cursor: default;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .add-chore-page {
@@ -39,6 +38,10 @@
 
 .add-roomie-form-btn:focus {
     color: rgb(126, 124, 134);
+}
+
+.select-roomie-text {
+    color: rgb(255, 135, 22);
 }
 
 .error {

@@ -122,12 +122,12 @@ class AddChore extends Component {
                     <ValidationError hasError={!this.state.choreChoreValid} message={this.state.validationMessages.choreChoreName} />
                 </div>
                 <div className='field'>
-                    <label htmlFor="roomie-select">
+                    <label className="select-roomie-text" htmlFor="roomie-select">
                         Select a Roomie
                     </label>
-                    <select id="roomie-input" name="roomie-id"
+                    <select className="roomie-select" id="roomie-input" name="roomie-id"
                     onChange={e => this.updateChoreRoomie(e.target.value)} >
-                        <option value="empty">...</option>
+                        <option className="options" value="empty">...</option>
                         {roomies.map(roomie => 
                             <option key={roomie.id} value={roomie.id}>
                                 {roomie.name}

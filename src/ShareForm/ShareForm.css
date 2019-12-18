@@ -17,13 +17,14 @@ form {
 .shareform input,
 .shareform textarea,
 .shareform select {
+  font-family: "Open Sans", sans-serif;
   font-size: 0.75em;
   padding: 8px;
   width: 325px;
 }
 
 .shareform select {
-    height: 33px;
+    height: 45px;
 }
 
 .shareform > .field {
@@ -32,6 +33,13 @@ form {
 
 .shareform > .buttons {
     margin-top: 26px;
+}
+
+select:active, 
+select:hover {
+    outline-color: rgb(255, 135, 22);
+    background-color:  rgb(253, 219, 188);
+    transition: 0.5s ease-out;
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px){
